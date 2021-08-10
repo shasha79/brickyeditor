@@ -22,7 +22,7 @@ $stroke-width: 1px;
             outline: 0px dotted $accent-color;
         }
 
-        border-left: $stroke-width solid $accent-color;        
+        //border-left: $stroke-width solid $accent-color;        
         margin-left: -($stroke-width + $stroke-offset);
         padding-left: $stroke-offset;
     }
@@ -31,7 +31,7 @@ $stroke-width: 1px;
         background: rgba(255, 255, 255, .85);
         border-radius: 1rem;
         width: 36px;
-        margin-left: -36px - $stroke-offset - $stroke-width;
+        margin-left: -12px - $stroke-offset - $stroke-width;
         position: absolute;
         display: none;        
         z-index: $fixed-z-index;

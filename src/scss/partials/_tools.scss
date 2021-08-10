@@ -47,7 +47,7 @@
         }
 
         > div {
-            color: $accent-color;
+            color: $second-color;
             line-height: 2rem;
             font-weight: 700;
 
@@ -71,7 +71,7 @@
         overflow: auto;    
     
         .bre-template-group {
-            color: $accent-color;
+            color: $second-color;
             font-size: .5rem;
             padding: .5rem .5rem 0rem .5rem;
             font-weight: 500;
@@ -121,13 +121,13 @@
 
         @media (min-width: 576px) and (max-width: 1023px) { 
             .bre-template > * {
-                @include scale(0.3);
+                @include scale(0.65);
             }
         }
 
         @media (min-width: 1024px) { 
             .bre-template > * {
-                @include scale(0.4);
+                @include scale(0.65);
             }
         }
     }    

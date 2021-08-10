@@ -15,7 +15,7 @@ namespace BrickyEditor {
         this.instance_id = Math.floor(Math.random() * 10000); // generate random id for unique instance identification
         console.log("Binding instance id: " + this.instance_id);
 
-        let $iframe = $('<iframe src="http://localhost:3000/app/FullModalView?id=' + this.instance_id + '" style="width: 100%; height: 100%"></iframe>');
+        let $iframe = $('<iframe src="http://localhost:3000/app/search-widget?id=' + this.instance_id + '" style="width: 100%; height: 100%"></iframe>');
 
         this.setSrc(this.data.src, false);
         $field.on("click", async () => {
