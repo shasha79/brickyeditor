@@ -58,7 +58,7 @@ namespace BrickyEditor {
             this.$toolsHideBtn.toggleClass("bre-tools-toggle-collapsed");
         }
 
-        private setModal() {
+        public setModal() {
             let $modal = $('<div class="bre bre-modal"><div class="bre-modal-placeholder"></div></div>');
             let $modalCloseBtn = $(`<div class="bre-modal-close"><a href="#">${EditorStrings.buttonClose} ✖</a></div>`);
             let $modalContent = $('<div class="bre-modal-content"></div>');
