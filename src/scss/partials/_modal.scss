@@ -22,7 +22,10 @@
         background-color: #fefefe;
         margin: 20px auto;
         min-width: 400px;
-        max-width: 800px;
+        // max-width: 800px;
+        max-width: 1600px;
+        height: 100%;
+   
         -moz-border-radius: 3px;
         -webkit-border-radius: 3px;
         border-radius: 3px;
@@ -41,8 +44,13 @@
             }
         }
 
+	.bre-modal-content {
+        	height: 100%;
+	}
+
         form {
             padding: 0rem 1.5rem 1.5rem 1.5rem;
+            height: 90%;
         }
     }
 }

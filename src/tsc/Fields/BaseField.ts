@@ -43,6 +43,7 @@ namespace BrickyEditor {
       public static registerCommonFields() {
         HtmlField.registerField();
         ImageField.registerField();
+        HeritageField.registerField();
         EmbedField.registerField();
         ContainerField.registerField();
       }
