@@ -5,6 +5,10 @@ $stroke-width: 1px;
 
 .bre-block-wrapper {
 
+    margin-bottom: 1rem;
+    margin-left: 3*($stroke-width + $stroke-offset);
+    padding-left: $stroke-offset;
+
     [contenteditable]:focus {
         outline: none;
     }
@@ -23,7 +27,7 @@ $stroke-width: 1px;
         }
 
         //border-left: $stroke-width solid $accent-color;        
-        margin-left: -($stroke-width + $stroke-offset);
+        margin-left: 3*($stroke-width + $stroke-offset);
         padding-left: $stroke-offset;
     }
 

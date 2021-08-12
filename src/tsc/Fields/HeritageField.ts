@@ -6,7 +6,7 @@ namespace BrickyEditor {
 
     export class HeritageField extends ImageField {
       private instance_id;
-
+      private $tooltip;
 
       bind() {
         let field = this;
@@ -32,12 +32,27 @@ namespace BrickyEditor {
               field.setAlt(chosenItem.title);
               field.setLink(chosenItem.image_url);
               Editor.UI.modal.hideModal();
+              field.setInfoTooltip(chosenItem);
 
             }
           });
 
           field.select();
         });
+      }
+
+      truncate(str, n){
+        return (str.length > n) ? str.substr(0, n-1) + '&hellip;' : str;
+      };
+
+      setInfoTooltip(item) {
+        let $tooltip = this.$field.next(".j-story__photo_credits");
+        if ($tooltip) {
+          $tooltip.find(".title").html('<a href="' + item.record_url + '">' + this.truncate(item.title, 40) + '</a>');
+          $tooltip.find(".provider").html(this.truncate(item.provider, 50) + " | " 
+          + '<a href=' + item.rights.url + '><img src="' + item.rights.icon + '" style="width: 6vw"/></a>');
+        }
+
       }
     }
   }
