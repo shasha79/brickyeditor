@@ -1,7 +1,17 @@
 @import '_base';
 
 @mixin scale($scale) {
-    zoom: $scale;
+//    zoom: $scale;
+    width:800px; height:450px;
+    -webkit-transform:scale(0.5, 0.55);
+    -ms-transform:scale(0.5, 0.55);
+    transform:scale(0.5, 0.55);
+    -webkit-transform-origin:0 0; 
+    -ms-transform-origin:0 0; 
+    transform-origin:0 0; 
+  //  border:4px solid green;
+    margin:0 0 -300px 0;
+
 }
 
 .bre-tools {    
@@ -72,7 +82,7 @@
     
         .bre-template-group {
             color: $second-color;
-            font-size: .5rem;
+            font-size: 1rem;
             padding: .5rem .5rem 0rem .5rem;
             font-weight: 500;
             text-transform: uppercase;

@@ -113,7 +113,9 @@ namespace BrickyEditor {
       return new Promise<Block[]>(async (resolve, reject) => {
         if (url) {
           try {
-            const blocks = await $.get(url);
+            let blocks = await $.get(url);
+            // Blocks can be nested
+            blocks = 'blocks' in blocks ? blocks.blocks : blocks;
             resolve(blocks);
           } catch (error) {
             editor.onError(EditorStrings.errorBlocksFileNotFound(url));

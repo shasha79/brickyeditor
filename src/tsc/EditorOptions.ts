@@ -31,6 +31,9 @@ namespace BrickyEditor {
 
         /** Url to fetch initial blocks, overrides initial blocks property */
         public blocksUrl: string;
+        /** Http header for Url to fetch initial blocks */
+        public blocksUrlHeader: any;
+
         /** Inital block data */
         public blocks: Array<Block>;
         /** Show blocks selector in compact mode */
@@ -61,6 +64,8 @@ namespace BrickyEditor {
             this.onUpload = options.onUpload || null;
 
             this.blocksUrl = options.blocksUrl || null;
+            this.blocksUrlHeader = options.blocksUrlHeader || null;
+
             this.blocks = options.blocks || null;
             this.compactTools = options.compactTools;
             this.ignoreHtml = options.ignoreHtml || false;
